@@ -3,16 +3,56 @@
 @tailwind utilities;
 
 @layer base {
-  :root, html {
-    background-color: #242323;
+  /* #161616 */
+  :root {
+    background: #242424
+  }
+  html{
+    color: white
   }
 }
 
 @layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+@font-face {
+  font-family: "Formula-Regular";
+  src: url('../public/fonts/Formula1/Formula1-Regular_web_0.ttf');
+}
+
+@font-face {
+  font-family: "Formula-Bold";
+  src: url('../public/fonts/Formula1/Formula1-Bold_web_0.ttf');
+}
+
+@font-face {
+  font-family: "Formula-Wide";
+  src: url('../public/fonts/Formula1/Formula1-Wide_web_0.ttf');
 }
 
 @layer components {
+  .smoothed {
+    @apply
+    transition-all ease-in-out duration-500
+  }
 
+  .main-container {
+    @apply
+    flex flex-col w-full h-fit min-h-full px-3
+  }
+
+  .navbar {
+    @apply
+    flex w-full h-24 max-w-[1200px] bg-[#D81919]
+  }
 }
 
