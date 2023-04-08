@@ -3,12 +3,16 @@ import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 
-export default defineConfig({
-  name: 'default',
-  title: 'podium',
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!
+const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET!
 
-  projectId: 'x0vlzmax',
-  dataset: 'circuits',
+export default defineConfig({
+  basePath: '/studio',
+  name: 'Podium_Content',
+  title: 'Podium Content',
+
+  projectId,
+  dataset,
 
   plugins: [deskTool(), visionTool()],
 
