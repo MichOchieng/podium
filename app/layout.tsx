@@ -1,4 +1,5 @@
 import '../public/globals.css'
+import Navbar from './components/Navbar'
 
 export const metadata = {
   title: 'Podium',
@@ -12,7 +13,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar/>
+        <main className='main-container'>
+          {children}
+        </main>
+      </body>
     </html>
   )
 }
