@@ -8,8 +8,9 @@
     background: #242424
   }
   html{
-    color: white
+    color: white;
   }
+  
 }
 
 @layer utilities {
@@ -45,14 +46,39 @@
     transition-all ease-in-out duration-500
   }
 
+  .aid{
+    @apply
+    border border-red-500
+  }
+
   .main-container {
     @apply
-    flex flex-col w-full h-fit min-h-full px-3
+    flex flex-col w-full h-full min-h-fit px-5 font-formulaRegular
+  }
+
+  .page-container {
+    @apply
+    flex flex-col items-center justify-center w-full max-w-[1200px] h-full min-h-fit
   }
 
   .navbar {
     @apply
-    flex w-full h-24 max-w-[1200px] bg-[#D81919]
+    flex items-center justify-evenly w-full h-24 max-w-[1200px] bg-[#e10600] font-formulaBold
+  }
+
+  .navButton{
+    @apply
+    h-14 w-14 min-w-fit flex flex-col items-center justify-end font-formulaRegular text-sm
+  }
+
+  .navIcon {
+    @apply
+    text-sm
+  }
+
+  .card {
+    @apply
+    bg-black border border-white rounded-md h-[360px] w-[250px] hover:border-[#e10600] smoothed m-5
   }
 }
 
