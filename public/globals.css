@@ -53,17 +53,17 @@
 
   .main-container {
     @apply
-    flex flex-col w-full h-full min-h-fit px-5 font-formulaRegular
+    flex flex-col items-center w-full h-full min-h-fit font-formulaRegular overflow-hidden
   }
 
   .page-container {
     @apply
-    flex flex-col items-center justify-center w-full max-w-[1200px] h-full min-h-fit
+    flex flex-col items-center justify-center w-full max-w-[1440px] h-full min-h-fit
   }
 
   .navbar {
     @apply
-    flex items-center justify-evenly w-full h-24 max-w-[1200px] bg-[#e10600] font-formulaBold
+    flex items-center justify-evenly w-full h-24 bg-[#e10600] font-formulaBold mx-auto
   }
 
   .navButton{
@@ -78,7 +78,7 @@
 
   .card {
     @apply
-    bg-black border border-white rounded-md h-[360px] w-[250px] hover:border-[#e10600] smoothed m-5
+    bg-black border border-white/70 rounded-md h-[360px] w-[250px] hover:border-[#e10600] smoothed m-5 relative overflow-hidden flex
   }
 }
 
