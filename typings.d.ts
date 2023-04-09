@@ -1,5 +1,9 @@
 import { ImageProps } from 'next/image';
 
+export interface Slug {
+    current: string
+}
+
 export interface Circuit {
   name: string;
   modelName: string;
@@ -8,7 +12,7 @@ export interface Circuit {
   laps: number;
   lapRecord: string;
   lapRecordHolder: string;
-  slug: string;
+  slug: Slug;
   trackThumbnail: {
     asset: {
       _ref: string;
