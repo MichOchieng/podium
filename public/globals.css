@@ -78,7 +78,7 @@
 
   .card {
     @apply
-    bg-black border border-white/70 rounded-md h-[360px] w-[250px] hover:border-[#e10600] smoothed m-5 relative overflow-hidden flex
+    bg-black border border-white/70 rounded-md h-[360px] w-[250px] hover:border-[#e10600] smoothed m-5 overflow-hidden flex
   }
 }
 
