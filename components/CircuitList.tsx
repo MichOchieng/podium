@@ -7,14 +7,12 @@ interface Props {
     circuits: Circuit[]
 }
 
-const CircuitList = ({ circuits }: Props) => {
-    console.log(circuits.length);
-    
+const CircuitList = ({ circuits }: Props) => {    
     return (
-        <div className="flex flex-row items-center justify-center flex-wrap">
-            {/* {circuits.map(circuit => (
-                <Card key={circuit.slug} />
-            ))} */}
+        <div className="w-full h-full flex flex-row items-center justify-center flex-wrap">
+            {circuits.map(circuit => (
+                <Card key={circuit.slug} circuit={circuit} />
+            ))}
         </div>
     )
 }
