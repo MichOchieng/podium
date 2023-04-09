@@ -14,7 +14,7 @@ async function PredictPage() {
   const circuits = await client.fetch(query)
 
   return (
-    <div className='page-container aid'>
+    <div className='page-container'>
       {/* Circuits */}
       <CircuitList circuits={circuits} />
     </div>
