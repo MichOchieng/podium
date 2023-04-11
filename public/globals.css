@@ -53,12 +53,17 @@
 
   .main-container {
     @apply
-    flex flex-col items-center w-full h-full min-h-fit font-formulaRegular overflow-hidden
+    flex flex-col items-center w-full h-full min-h-fit font-formulaRegular overflow-hidden p-10
   }
 
   .page-container {
     @apply
     flex flex-col items-center justify-center w-full max-w-[1440px] h-full min-h-fit
+  }
+
+  .mainButton{
+    @apply
+    text-2xl font-bold bg-[#e10600] rounded-md w-full h-full flex items-center justify-center drop-shadow-md hover:scale-105 smoothed
   }
 
   .navbar {
@@ -79,6 +84,11 @@
   .card {
     @apply
     bg-black border border-white/70 rounded-md h-[360px] w-[250px] hover:border-[#e10600] smoothed m-5 overflow-hidden flex
+  }
+
+  .trackInfoElement {
+    @apply
+    flex flex-col items-center justify-center border-r-2 border-b-2 border-gray-400 w-4/6 rounded-br-md mx-auto
   }
 }
 
