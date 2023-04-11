@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-img-element */
 import { client } from '@/lib/sanity-client';
-import { Circuit } from '@/typings'
+import { Circuit } from '@/typings';
 import { groq } from 'next-sanity';
-import urlFor from '@/lib/urlFor'
-import Image from 'next/image'
-import React from 'react'
+import urlFor from '@/lib/urlFor';
+import Results from '@/components/Results';
 
 interface Props {
     params: {
         slug: string
     }
 }
+
 async function CircuitPage({ params: { slug } }: Props) {
     // Get circuit data based on passed slug (url)
     const query = groq`
@@ -18,11 +18,10 @@ async function CircuitPage({ params: { slug } }: Props) {
     `;
     const circuit: Circuit = await client.fetch(query, { slug })
 
-
     return (
-        <div className='page-container flex flex-col lg:flex-row'>
+        <div className='page-container lg:flex-row'>
             {/* Track info */}
-            <div className="w-4/6 flex flex-col items-center justify-center rounded-tr-md border-t-4 border-r-4 border-[#e10600]">
+            <div className="w-full lg:w-4/6 h-[550px] flex flex-col items-center justify-center rounded-tr-md border-t-4 border-r-4 border-[#e10600] overflow-hidden mr-5">
                 {/* Track name */}
                 <div className="w-full">
                     <h1 className="text-3xl font-formulaBold">{circuit.modelName}</h1>
@@ -56,8 +55,8 @@ async function CircuitPage({ params: { slug } }: Props) {
                 </div>
             </div>
             {/* Get prediction */}
-            <div className="">
-
+            <div className="bg-[#1e1e1e] w-full h-96  flex flex-col items-center justify-center my-5 lg:my-0 lg:w-2/6 min-w-[400px] lg:h-[550px] rounded-xl drop-shadow-md">
+                <Results circuitName={circuit.modelName}/>
             </div>
         </div>
     );
